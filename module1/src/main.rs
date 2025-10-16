@@ -170,6 +170,23 @@ fn doubly_linked_list_case() {
 
 fn main() {
     println!("Hello, world!");
+
+    // Неправильное использование rc
+    //let myrc = std::rc::Rc::new(1);
+    //let myweak = std::rc::Rc::downgrade(&myrc);
+    //std::mem::drop(myrc);
+    //println!("weak: {}", myweak.upgrade().unwrap());
+
+    // Неправильное использование refcell - 1
+    //let myrefcell = std::cell::RefCell::new(1);
+    //let _borrow_nonmut = myrefcell.borrow();
+    //let _borrow_mut = myrefcell.borrow_mut();
+
+    // Неправильное использование refcell - 2
+    //let myrefcell = std::cell::RefCell::new(1);
+    //let _borrow_mut_1 = myrefcell.borrow_mut();
+    //let _borrow_mut_2 = myrefcell.borrow_mut();
+
     single_linked_list_case();
     doubly_linked_list_case();
 }
